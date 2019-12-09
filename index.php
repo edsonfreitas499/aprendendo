@@ -8,7 +8,7 @@
 	<h1>
 		<?php
 			if(isset($_GET["user"])) {
-				echo base64_decode($_GET["user"]);
+				echo base64_decode($_GET["user999999"]);
 			} else {
 				header("location:formulario.php");
 			}
