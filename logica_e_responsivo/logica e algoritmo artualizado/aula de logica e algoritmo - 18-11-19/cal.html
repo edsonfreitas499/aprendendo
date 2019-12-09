@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8"/>
+	<title>HTML - Estrutura básica</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+var val1 = parseInt(prompt("informe o primeiro valor:"));
+var val2 = parseInt(prompt("informe o segundo valor:"));
+var oper = prompt("informe a operação:");
+var total = 0;
+
+	switch(oper){
+		case "+":
+			total = val1 + val2;
+		break;
+		case "-":
+			total = val1 - val2;
+		break;
+		case "*":
+			total = val1 * val2;
+		break;
+		case "/":
+			if(val2 != 0){
+				total = val1 / val2;
+			}else {
+				total = 0;
+			}
+		break;
+		default:
+			total = null;
+		break;
+	}
+	if(total != null)
+		alert("O resultado é " + total);
+		
+	else
+		alert("Operação invalida!");
+			
+			
+	
+
+
+
+</script>

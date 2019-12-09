@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8"/>
+	<title>Exemplo</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+	function soma(n1, n2) {
+		return n1 + n2;
+	}	
+	function subtracao(n1, n2) {
+		return n1 - n2;
+	} 
+	function multiplicacao(n1, n2) {
+		return n1 * n2;
+	}
+	function divisao(n1, n2) {
+		if(n2 == 0) {
+			return 0;
+		} else {		
+		return n1 / n2;
+		}	
+	}
+	function tabuada(n1) {
+		var vlr = "";
+		for(var i = 0; i <= 10; i++) {
+			vlr += i + " X " + num1 + " = " + ( i * num1) + " \n"
+		}	
+		return vlr;
+	}
+	function percentual(n1, n2) {
+		var vlr = divisao(n1, 100);
+		vlr = vlr * multiplicacao(vlr, n2);
+		return vlr;
+	}	
+
+	do{
+		var num1 = parseFloat(prompt("Digite o 1° número"));
+		var num2 = parseFloat(prompt("Digite o 2° número"));
+		var opr = (prompt("Digite o 2° número"));
+		var result = null;
+		switch(opr) {
+			case "+":
+				result = soma(num1, num2);
+			break;
+			case "-":
+				result = subtracao(num1, num2);
+			break;
+			case "*":
+				result = multiplicacao(num1, num2);
+			break;
+			case "/":
+				result = divisao(num1, num2);
+			break;
+			case "t":
+				result = tabuada(num1);
+			break;
+			case "%":
+				result = percentual(num1, num2);
+			break;	
+			default:
+				result = "Operação invalida !";
+			break;
+		}
+	
+		alert(result);
+		var next = prompt("Deseja realizar outra operação ? (S/N)");
+	
+	} while(next == "S" || next == "s");	
+				
+	
+</script>

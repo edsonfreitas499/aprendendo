@@ -1,0 +1,36 @@
+/* faça um programa que leia 2 nota de um aluno e calcule a media, caso a media seja inferior a 5 o aluno esta reprovado,
+ caso o contrario o aluno esta aprovavado */
+
+
+<!doctype html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8"/>
+	<title>HTML - Estrutura básica</title>
+</head>
+<body>
+
+</body
+</html>
+<script>
+	var nota1 = parseFloat(prompt("Digite a nota 1°:"));
+	var nota2 = parseFloat(prompt("Digite a nota 2°:"));
+	var nota = (nota1 + nota2)/2;
+	
+	
+	if(nota <= 4.9) {
+		alert("REPROVADO");
+	} else if(nota >= 5 && nota <= 6.9) {
+		alert("RECUPERÇÃO");
+		var rec = parseFloat(prompt("digite a nota da recuperação"));
+		if(rec >=6) {
+			alert("Aprovado na recuperação");
+		}else {
+			alert("Reprovado na recuperação");
+		}			
+	}else {
+		alert("APROVADO");
+	}
+	
+	
+</script>

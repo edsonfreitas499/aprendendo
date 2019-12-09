@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8"/>
+	<title>Exemplo</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+	var qtd = parseInt(prompt("Digite a qtd nota:"));
+	
+	var nota = new Array(qtd);
+	
+	for(var i = 0; i < nota.length ; i++) {
+		nota[i] = parseFloat(prompt("Digite a nota:"));
+	}
+
+	nota.sort();
+	
+	for(var i = 0; i < nota.length ; i++) {
+		alert(nota[i]);
+	}	
+	
+</script>

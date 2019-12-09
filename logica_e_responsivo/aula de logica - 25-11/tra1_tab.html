@@ -1,0 +1,54 @@
+<head>
+	<meta charset="utf-8"/>
+	<title>Exemplo</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+	var rep = null;
+	
+	do { 
+		var num1 = parseInt(prompt("informe o primeiro valor:"));
+		var num2 = parseInt(prompt("informe o segundo valor:"));
+		var total = 0;
+		var opr = prompt("Digite a operação (+ soma - subtração / divisão t tabuada):");
+		
+		switch(opr){
+			case "+":
+				total = num1 + num2;
+			break;
+			case "-":
+				total = num1 - num2;
+			break;
+			case "*":
+				total = num1 * num2;
+			break;
+			case "/":
+				if(val2 != 0){
+					total = num1 / num2;
+				}else {
+					total = 0;
+				}
+			break;
+			case "t":
+				num1 = 0;
+				total = "";
+				while(num1 <= 10) {
+					total = total + " " + num1 + " X " + num2 + " = " + (num1 * num2) + " \n";
+					num1++;
+				}
+			break;
+			default:
+				total = "Opção invalida";
+			break;
+		}
+		alert(total);
+		rep = prompt("Deseja realizar outra conta?")	
+	}while(rep == "S" || rep == "s");
+		
+	 
+	 
+</script>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <title>Exemplo</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+	function calcularMedia(n1, n2, n3, n4) {
+		return (n1 + n2 + n3 + n4) / 4;
+	}
+
+	function menorNota(i, menor, media) {
+		if(menor != null) {
+			if(media[i] < media[menor]) {
+				menor = i;
+			}
+		} else {
+			menor = i;
+		}
+		return menor;
+	}
+	
+	function maiorNota(i, maior, media) {
+		if(maior != null) {
+			if(media[i] > media[maior]) {
+				maior = i;
+			}
+		} else {
+			maior = i;
+		}
+		return maior;
+	}
+
+	var qtd = parseInt(prompt("Digite a quantidade de alunos:"));
+	
+	var nome = new Array(qtd);
+	var nota1 = new Array(qtd);
+	var nota2 = new Array(qtd);
+	var nota3 = new Array(qtd);
+	var nota4 = new Array(qtd);
+	var media = new Array(qtd);
+	var menor = null;
+	var maior = null;
+	
+	
+    for(var i = 0; i < nome.length; i++) {
+		nome[i] = prompt("Digite o Nome");
+		nota1[i] = parseFloat(prompt("Digite a nota 1:"));
+		nota2[i] = parseFloat(prompt("Digite a nota 2:"));
+		nota3[i] = parseFloat(prompt("Digite a nota 3:"));
+		nota4[i] = parseFloat(prompt("Digite a nota 4:"));
+		media[i] = calcularMedia(nota1[i], nota2[i], nota3[i], nota4[i]);
+		
+		menor = menorNota(i, menor, media);
+		maior = maiorNota(i, maior, media);
+	}	
+   
+
+	for(var i = 0; i < nome.length; i++) {
+		document.write(nome[i] + " - " + media[i] + "<br />");
+	}
+   
+	document.write("Menor - " + media[menor] + "<br />");
+	document.write("Maior - " + media[maior] + "<br />");
+   
+</script>

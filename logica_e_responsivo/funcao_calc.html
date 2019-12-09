@@ -1,0 +1,71 @@
+﻿<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>HTML5 - Estrutura básica</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+
+		function soma (n1, n2){
+			return n1 + n2;
+		}
+
+		function sub (n1, n2){
+			return n1 - n2;
+		}
+
+		function mult (n1, n2){
+			return n1 * n2;
+		}
+
+		function div (n1, n2){
+				if(n2 != 0){
+					return num1 / num2;
+				} else {
+					total = 0;
+				}
+		}
+		
+		function tabuada (n1){
+			var vlr = "";
+			for(var i = 0; i <= 10; i++){
+				vlr += i + " X "+ num1 + " = " + (i * num1) + "\n";
+				}
+			return vlr;
+		}
+
+	do{
+		var num1 = parseInt(prompt("Digite o 1º valor:"));
+		var num2 = parseInt(prompt("Digite o 2º valor:"));
+		var op = prompt("Digite a operação(+ soma - subtração * multiplicação / divisão t tabuada):");
+		var total = 0;
+
+		switch(op){
+			case "+":
+				total = soma(num1, num2);
+			break;
+			case "-":
+				total = sub (num1, num2);
+			break;
+			case "*":
+				total = mult (num1, num2);
+			break;
+			case "/":
+				total = div (num1, num2);
+			break;
+			case "t":
+				total = tabuada (num1);
+			break;
+			default:
+				total = "Opção inválida";
+			break;
+		}
+		alert(total);
+		rep = prompt("Deseja realizar outra conta?");
+	}
+	
+	while(rep == "S" || rep == "s");
+	
+</script>

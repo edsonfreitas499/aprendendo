@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8"/>
+	<title>Exemplo</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+	var i = 0;
+	var idade, peso, mediaIdade = 0; qtdObeso = 0;
+	
+	while(i < 7) {
+		idade = parseFloat(prompt("Digite a idade:"));
+		peso = parseFloat(prompt("Digite o peso :"));
+		
+		if(peso > 90)
+			qtdObeso++;
+		mediaIdade = mediaIdade + idade;
+		i++;	
+	}
+
+	mediaIdade = mediaIdade / 7;
+
+	alert("Idade: " + mediaIdade );
+
+	alert("Peso: " + qtdObeso );	
+	
+</script>
